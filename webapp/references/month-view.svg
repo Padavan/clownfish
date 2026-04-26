@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="720" font-family="system-ui, sans-serif">
+
+  <!-- Background -->
+  <rect width="900" height="720" fill="#f8f8f8"/>
+
+  <!-- Header bar -->
+  <rect width="900" height="56" fill="#2c2c2c"/>
+  <text x="24" y="34" fill="white" font-size="18" font-weight="600">spaced-cal</text>
+
+  <!-- Nav: month/week toggle -->
+  <rect x="680" y="14" width="72" height="28" rx="4" fill="#7c6af7"/>
+  <text x="716" y="32" fill="white" font-size="13" text-anchor="middle">Month</text>
+  <rect x="756" y="14" width="72" height="28" rx="4" fill="#444"/>
+  <text x="792" y="32" fill="#aaa" font-size="13" text-anchor="middle">Week</text>
+
+  <!-- Month navigation -->
+  <text x="450" y="94" fill="#333" font-size="15" font-weight="500" text-anchor="middle">April 2026</text>
+  <text x="230" y="94" fill="#666" font-size="22" text-anchor="middle">‹</text>
+  <text x="670" y="94" fill="#666" font-size="22" text-anchor="middle">›</text>
+  <text x="820" y="94" fill="#7c6af7" font-size="13" text-anchor="middle">Today</text>
+
+  <!-- Day-of-week headers -->
+  <!-- 7 cols, each ~118px wide, starting x=30 -->
+  <rect x="0" y="108" width="900" height="32" fill="#efefef"/>
+  <text x="89"  y="128" fill="#888" font-size="12" font-weight="600" text-anchor="middle">MON</text>
+  <text x="217" y="128" fill="#888" font-size="12" font-weight="600" text-anchor="middle">TUE</text>
+  <text x="345" y="128" fill="#888" font-size="12" font-weight="600" text-anchor="middle">WED</text>
+  <text x="473" y="128" fill="#888" font-size="12" font-weight="600" text-anchor="middle">THU</text>
+  <text x="601" y="128" fill="#888" font-size="12" font-weight="600" text-anchor="middle">FRI</text>
+  <text x="729" y="128" fill="#888" font-size="12" font-weight="600" text-anchor="middle">SAT</text>
+  <text x="857" y="128" fill="#888" font-size="12" font-weight="600" text-anchor="middle">SUN</text>
+
+  <!-- Grid: 5 rows x 7 cols, each cell ~118x108 -->
+  <!-- Row 1: Mar 30 – Apr 5 -->
+  <!-- Row 2: Apr 6 – 12 -->
+  <!-- Row 3: Apr 13 – 19 -->
+  <!-- Row 4: Apr 20 – 26 (today = Apr 20) -->
+  <!-- Row 5: Apr 27 – May 3 -->
+
+  <!-- Draw all cells first -->
+  <!-- R1 -->
+  <rect x="1"   y="140" width="127" height="108" fill="#fafafa" stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="128" y="140" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="256" y="140" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="384" y="140" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="512" y="140" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="640" y="140" width="128" height="108" fill="#fafafa" stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="768" y="140" width="131" height="108" fill="#fafafa" stroke="#e4e4e4" stroke-width="1"/>
+  <!-- R2 -->
+  <rect x="1"   y="248" width="127" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="128" y="248" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="256" y="248" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="384" y="248" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="512" y="248" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="640" y="248" width="128" height="108" fill="#fafafa" stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="768" y="248" width="131" height="108" fill="#fafafa" stroke="#e4e4e4" stroke-width="1"/>
+  <!-- R3 -->
+  <rect x="1"   y="356" width="127" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="128" y="356" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="256" y="356" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="384" y="356" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="512" y="356" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="640" y="356" width="128" height="108" fill="#fafafa" stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="768" y="356" width="131" height="108" fill="#fafafa" stroke="#e4e4e4" stroke-width="1"/>
+  <!-- R4 (today row) -->
+  <rect x="1"   y="464" width="127" height="108" fill="#faf9ff" stroke="#7c6af7" stroke-width="2"/>
+  <rect x="128" y="464" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="256" y="464" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="384" y="464" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="512" y="464" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="640" y="464" width="128" height="108" fill="#fafafa" stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="768" y="464" width="131" height="108" fill="#fafafa" stroke="#e4e4e4" stroke-width="1"/>
+  <!-- R5 -->
+  <rect x="1"   y="572" width="127" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="128" y="572" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="256" y="572" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="384" y="572" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="512" y="572" width="128" height="108" fill="white"   stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="640" y="572" width="128" height="108" fill="#fafafa" stroke="#e4e4e4" stroke-width="1"/>
+  <rect x="768" y="572" width="131" height="108" fill="#fafafa" stroke="#e4e4e4" stroke-width="1"/>
+
+  <!-- Day numbers -->
+  <!-- R1: Mar 30–Apr 5 (greyed out March days) -->
+  <text x="119"  y="160" fill="#bbb" font-size="13" text-anchor="end">30</text>
+  <text x="247"  y="160" fill="#bbb" font-size="13" text-anchor="end">31</text>
+  <text x="375"  y="160" fill="#555" font-size="13" text-anchor="end">1</text>
+  <text x="503"  y="160" fill="#555" font-size="13" text-anchor="end">2</text>
+  <text x="631"  y="160" fill="#555" font-size="13" text-anchor="end">3</text>
+  <text x="759"  y="160" fill="#555" font-size="13" text-anchor="end">4</text>
+  <text x="891"  y="160" fill="#555" font-size="13" text-anchor="end">5</text>
+
+  <!-- R2: Apr 6–12 -->
+  <text x="119"  y="268" fill="#555" font-size="13" text-anchor="end">6</text>
+  <text x="247"  y="268" fill="#555" font-size="13" text-anchor="end">7</text>
+  <text x="375"  y="268" fill="#555" font-size="13" text-anchor="end">8</text>
+  <text x="503"  y="268" fill="#555" font-size="13" text-anchor="end">9</text>
+  <text x="631"  y="268" fill="#555" font-size="13" text-anchor="end">10</text>
+  <text x="759"  y="268" fill="#555" font-size="13" text-anchor="end">11</text>
+  <text x="891"  y="268" fill="#555" font-size="13" text-anchor="end">12</text>
+
+  <!-- R3: Apr 13–19 -->
+  <text x="119"  y="376" fill="#555" font-size="13" text-anchor="end">13</text>
+  <text x="247"  y="376" fill="#555" font-size="13" text-anchor="end">14</text>
+  <text x="375"  y="376" fill="#555" font-size="13" text-anchor="end">15</text>
+  <text x="503"  y="376" fill="#555" font-size="13" text-anchor="end">16</text>
+  <text x="631"  y="376" fill="#555" font-size="13" text-anchor="end">17</text>
+  <text x="759"  y="376" fill="#555" font-size="13" text-anchor="end">18</text>
+  <text x="891"  y="376" fill="#555" font-size="13" text-anchor="end">19</text>
+
+  <!-- R4: Apr 20–26 (today = 20) -->
+  <!-- today bubble -->
+  <circle cx="104" cy="482" r="12" fill="#7c6af7"/>
+  <text x="104"  y="487" fill="white" font-size="13" font-weight="700" text-anchor="middle">20</text>
+  <text x="247"  y="484" fill="#555" font-size="13" text-anchor="end">21</text>
+  <text x="375"  y="484" fill="#555" font-size="13" text-anchor="end">22</text>
+  <text x="503"  y="484" fill="#555" font-size="13" text-anchor="end">23</text>
+  <text x="631"  y="484" fill="#555" font-size="13" text-anchor="end">24</text>
+  <text x="759"  y="484" fill="#555" font-size="13" text-anchor="end">25</text>
+  <text x="891"  y="484" fill="#555" font-size="13" text-anchor="end">26</text>
+
+  <!-- R5: Apr 27–May 3 -->
+  <text x="119"  y="592" fill="#555" font-size="13" text-anchor="end">27</text>
+  <text x="247"  y="592" fill="#555" font-size="13" text-anchor="end">28</text>
+  <text x="375"  y="592" fill="#555" font-size="13" text-anchor="end">29</text>
+  <text x="503"  y="592" fill="#555" font-size="13" text-anchor="end">30</text>
+  <text x="631"  y="592" fill="#bbb" font-size="13" text-anchor="end">1</text>
+  <text x="759"  y="592" fill="#bbb" font-size="13" text-anchor="end">2</text>
+  <text x="891"  y="592" fill="#bbb" font-size="13" text-anchor="end">3</text>
+
+  <!-- Event chips — small coloured pills -->
+
+  <!-- Apr 1 (Wed) -->
+  <rect x="260" y="165" width="120" height="16" rx="3" fill="#7c6af7"/>
+  <text x="266" y="176" fill="white" font-size="10">Review Ch.3</text>
+
+  <!-- Apr 3 (Fri) -->
+  <rect x="516" y="165" width="120" height="16" rx="3" fill="#f7a23a"/>
+  <text x="522" y="176" fill="white" font-size="10">Vocab set B</text>
+
+  <!-- Apr 6 (Mon) -->
+  <rect x="5"   y="273" width="120" height="16" rx="3" fill="#4caf8a"/>
+  <text x="11"  y="284" fill="white" font-size="10">Kanji set 1</text>
+
+  <!-- Apr 8 (Wed) -->
+  <rect x="260" y="273" width="120" height="16" rx="3" fill="#7c6af7"/>
+  <text x="266" y="284" fill="white" font-size="10">Review Ch.3</text>
+  <rect x="260" y="292" width="120" height="16" rx="3" fill="#e05a7a"/>
+  <text x="266" y="303" fill="white" font-size="10">History notes</text>
+
+  <!-- Apr 13 (Mon) -->
+  <rect x="5"   y="381" width="120" height="16" rx="3" fill="#7c6af7"/>
+  <text x="11"  y="392" fill="white" font-size="10">Review Ch.3</text>
+  <rect x="5"   y="400" width="120" height="16" rx="3" fill="#4caf8a"/>
+  <text x="11"  y="411" fill="white" font-size="10">Kanji set 1</text>
+
+  <!-- Apr 17 (Fri) -->
+  <rect x="516" y="381" width="120" height="16" rx="3" fill="#f7a23a"/>
+  <text x="522" y="392" fill="white" font-size="10">Vocab set B</text>
+
+  <!-- Apr 20 (Mon) TODAY — two events -->
+  <rect x="5"   y="497" width="120" height="16" rx="3" fill="#7c6af7"/>
+  <text x="11"  y="508" fill="white" font-size="10">Review Ch.3</text>
+  <rect x="5"   y="516" width="120" height="16" rx="3" fill="#f7a23a"/>
+  <text x="11"  y="527" fill="white" font-size="10">Vocab set B</text>
+  <!-- completed chip -->
+  <rect x="5"   y="535" width="120" height="16" rx="3" fill="#e0e0e0"/>
+  <text x="11"  y="546" fill="#aaa" font-size="10">✓ Grammar drill</text>
+
+  <!-- Apr 21 (Tue) -->
+  <rect x="132" y="497" width="120" height="16" rx="3" fill="#4caf8a"/>
+  <text x="138" y="508" fill="white" font-size="10">Kanji set 1</text>
+
+  <!-- Apr 22 (Wed) -->
+  <rect x="260" y="497" width="120" height="16" rx="3" fill="#7c6af7"/>
+  <text x="266" y="508" fill="white" font-size="10">Review Ch.3</text>
+
+  <!-- Apr 24 (Fri) -->
+  <rect x="516" y="497" width="120" height="16" rx="3" fill="#f7a23a"/>
+  <text x="522" y="508" fill="white" font-size="10">Vocab set B</text>
+
+  <!-- Apr 25 (Sat) -->
+  <rect x="644" y="497" width="120" height="16" rx="3" fill="#4caf8a"/>
+  <text x="650" y="508" fill="white" font-size="10">Kanji set 1</text>
+
+  <!-- Apr 27 (Mon) -->
+  <rect x="5"   y="597" width="120" height="16" rx="3" fill="#7c6af7"/>
+  <text x="11"  y="608" fill="white" font-size="10">Review Ch.3</text>
+  <rect x="5"   y="616" width="120" height="16" rx="3" fill="#e05a7a"/>
+  <text x="11"  y="627" fill="white" font-size="10">History notes</text>
+
+  <!-- Bottom bar -->
+  <rect width="900" height="1" y="679" fill="#444"/>
+  <rect width="900" height="40" y="680" fill="#2c2c2c"/>
+  <rect x="16" y="690" width="64" height="22" rx="4" fill="#444"/>
+  <text x="48" y="705" fill="#ccc" font-size="12" text-anchor="middle">↩ Undo</text>
+  <text x="170" y="705" fill="#666" font-size="11">Last: completed "Grammar drill" (Mon 20)</text>
+
+  <!-- + Add event FAB -->
+  <circle cx="858" cy="650" r="22" fill="#7c6af7"/>
+  <text x="858" y="657" fill="white" font-size="22" text-anchor="middle" font-weight="300">+</text>
+
+</svg>

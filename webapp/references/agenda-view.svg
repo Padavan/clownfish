@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="720" font-family="system-ui, sans-serif">
+
+  <!-- Background -->
+  <rect width="480" height="720" fill="#f8f8f8"/>
+
+  <!-- Header -->
+  <rect width="480" height="52" fill="#2c2c2c"/>
+  <text x="20" y="32" fill="white" font-size="16" font-weight="600">spaced-cal</text>
+  <text x="240" y="32" fill="white" font-size="14" text-anchor="middle">Mon, Apr 20</text>
+  <!-- nav arrows -->
+  <text x="390" y="34" fill="#888" font-size="20">‹</text>
+  <text x="420" y="34" fill="#888" font-size="20">›</text>
+  <text x="455" y="32" fill="#7c6af7" font-size="12" text-anchor="middle">Today</text>
+
+  <!-- Date strip — horizontal scrollable day picker -->
+  <rect width="480" height="64" y="52" fill="#222"/>
+
+  <!-- Day pills -->
+  <!-- Sat 18 -->
+  <rect x="12"  y="60" width="44" height="48" rx="8" fill="#333"/>
+  <text x="34"  y="78"  fill="#666" font-size="10" text-anchor="middle">SAT</text>
+  <text x="34"  y="96"  fill="#666" font-size="16" font-weight="400" text-anchor="middle">18</text>
+
+  <!-- Sun 19 -->
+  <rect x="62"  y="60" width="44" height="48" rx="8" fill="#333"/>
+  <text x="84"  y="78"  fill="#666" font-size="10" text-anchor="middle">SUN</text>
+  <text x="84"  y="96"  fill="#666" font-size="16" font-weight="400" text-anchor="middle">19</text>
+
+  <!-- Mon 20 TODAY selected -->
+  <rect x="112" y="58" width="52" height="52" rx="10" fill="#7c6af7"/>
+  <text x="138" y="77"  fill="#d4ceff" font-size="10" text-anchor="middle">MON</text>
+  <text x="138" y="97"  fill="white" font-size="18" font-weight="700" text-anchor="middle">20</text>
+
+  <!-- Tue 21 — has events dot -->
+  <rect x="170" y="60" width="44" height="48" rx="8" fill="#333"/>
+  <text x="192" y="78"  fill="#888" font-size="10" text-anchor="middle">TUE</text>
+  <text x="192" y="96"  fill="#ccc" font-size="16" font-weight="400" text-anchor="middle">21</text>
+  <circle cx="192" cy="104" r="3" fill="#4caf8a"/>
+
+  <!-- Wed 22 -->
+  <rect x="220" y="60" width="44" height="48" rx="8" fill="#333"/>
+  <text x="242" y="78"  fill="#888" font-size="10" text-anchor="middle">WED</text>
+  <text x="242" y="96"  fill="#ccc" font-size="16" font-weight="400" text-anchor="middle">22</text>
+  <circle cx="242" cy="104" r="3" fill="#7c6af7"/>
+
+  <!-- Thu 23 -->
+  <rect x="270" y="60" width="44" height="48" rx="8" fill="#333"/>
+  <text x="292" y="78"  fill="#888" font-size="10" text-anchor="middle">THU</text>
+  <text x="292" y="96"  fill="#ccc" font-size="16" font-weight="400" text-anchor="middle">23</text>
+
+  <!-- Fri 24 -->
+  <rect x="320" y="60" width="44" height="48" rx="8" fill="#333"/>
+  <text x="342" y="78"  fill="#888" font-size="10" text-anchor="middle">FRI</text>
+  <text x="342" y="96"  fill="#ccc" font-size="16" font-weight="400" text-anchor="middle">24</text>
+  <circle cx="342" cy="104" r="3" fill="#f7a23a"/>
+
+  <!-- Sat 25 -->
+  <rect x="370" y="60" width="44" height="48" rx="8" fill="#333"/>
+  <text x="392" y="78"  fill="#666" font-size="10" text-anchor="middle">SAT</text>
+  <text x="392" y="96"  fill="#666" font-size="16" font-weight="400" text-anchor="middle">25</text>
+
+  <!-- Sun 26 -->
+  <rect x="420" y="60" width="44" height="48" rx="8" fill="#333"/>
+  <text x="442" y="78"  fill="#666" font-size="10" text-anchor="middle">SUN</text>
+  <text x="442" y="96"  fill="#666" font-size="16" font-weight="400" text-anchor="middle">26</text>
+
+  <!-- Section label -->
+  <text x="24" y="142" fill="#aaa" font-size="11" font-weight="600" letter-spacing="1">TODAY · 3 TASKS</text>
+
+  <!-- ── Task card 1: pending ── -->
+  <rect x="16" y="152" width="448" height="88" rx="10" fill="white" stroke="#e8e8e8" stroke-width="1"/>
+  <!-- colour bar -->
+  <rect x="16" y="152" width="6" height="88" rx="3" fill="#7c6af7"/>
+  <!-- check circle -->
+  <circle cx="56" cy="196" r="18" fill="none" stroke="#7c6af7" stroke-width="2"/>
+  <!-- task info -->
+  <text x="84" y="184" fill="#222" font-size="15" font-weight="600">Review Chapter 3</text>
+  <text x="84" y="202" fill="#888" font-size="12">Fibonacci · occurrence 4 of 9</text>
+  <text x="84" y="218" fill="#bbb" font-size="11">Next after complete: May 3 (+13 days)</text>
+  <!-- move button -->
+  <rect x="368" y="165" width="80" height="26" rx="5" fill="#f0eeff"/>
+  <text x="408" y="182" fill="#7c6af7" font-size="11" text-anchor="middle">Move ›</text>
+
+  <!-- ── Task card 2: pending ── -->
+  <rect x="16" y="252" width="448" height="88" rx="10" fill="white" stroke="#e8e8e8" stroke-width="1"/>
+  <rect x="16" y="252" width="6" height="88" rx="3" fill="#f7a23a"/>
+  <circle cx="56" cy="296" r="18" fill="none" stroke="#f7a23a" stroke-width="2"/>
+  <text x="84" y="284" fill="#222" font-size="15" font-weight="600">Vocab set B</text>
+  <text x="84" y="302" fill="#888" font-size="12">Doubling · occurrence 3 of 7</text>
+  <text x="84" y="318" fill="#bbb" font-size="11">Next after complete: Apr 24 (+4 days)</text>
+  <rect x="368" y="265" width="80" height="26" rx="5" fill="#fff8ee"/>
+  <text x="408" y="282" fill="#f7a23a" font-size="11" text-anchor="middle">Move ›</text>
+
+  <!-- ── Task card 3: completed ── -->
+  <rect x="16" y="352" width="448" height="88" rx="10" fill="#fafafa" stroke="#ececec" stroke-width="1"/>
+  <rect x="16" y="352" width="6" height="88" rx="3" fill="#ccc"/>
+  <!-- filled check -->
+  <circle cx="56" cy="396" r="18" fill="#e0e0e0"/>
+  <text x="56" y="402" fill="#aaa" font-size="18" text-anchor="middle" font-weight="300">✓</text>
+  <text x="84" y="384" fill="#bbb" font-size="15" font-weight="600" text-decoration="line-through">Grammar drill</text>
+  <text x="84" y="402" fill="#ccc" font-size="12">Fibonacci · completed at 09:14</text>
+  <text x="84" y="418" fill="#ddd" font-size="11">Next: Apr 28 (+8 days)</text>
+
+  <!-- separator -->
+  <text x="24" y="462" fill="#aaa" font-size="11" font-weight="600" letter-spacing="1">UPCOMING</text>
+
+  <!-- Upcoming slim rows -->
+  <!-- Apr 21 -->
+  <rect x="16" y="472" width="448" height="44" rx="8" fill="white" stroke="#efefef" stroke-width="1"/>
+  <circle cx="40" cy="494" r="5" fill="#4caf8a"/>
+  <text x="54"  y="498" fill="#555" font-size="13">Kanji set 1</text>
+  <text x="350" y="498" fill="#bbb" font-size="12" text-anchor="end">Tomorrow · Apr 21</text>
+
+  <!-- Apr 22 -->
+  <rect x="16" y="522" width="448" height="44" rx="8" fill="white" stroke="#efefef" stroke-width="1"/>
+  <circle cx="40" cy="544" r="5" fill="#7c6af7"/>
+  <text x="54"  y="548" fill="#555" font-size="13">Review Chapter 3</text>
+  <text x="350" y="548" fill="#bbb" font-size="12" text-anchor="end">Wed · Apr 22</text>
+
+  <!-- Apr 24 -->
+  <rect x="16" y="572" width="448" height="44" rx="8" fill="white" stroke="#efefef" stroke-width="1"/>
+  <circle cx="40" cy="594" r="5" fill="#f7a23a"/>
+  <text x="54"  y="598" fill="#555" font-size="13">Vocab set B</text>
+  <text x="350" y="598" fill="#bbb" font-size="12" text-anchor="end">Fri · Apr 24</text>
+
+  <!-- Bottom bar -->
+  <rect width="480" height="1" y="639" fill="#ddd"/>
+  <rect width="480" height="60" y="640" fill="white"/>
+
+  <!-- Tab bar -->
+  <!-- Agenda (active) -->
+  <text x="60"  y="676" fill="#7c6af7" font-size="10" text-anchor="middle" font-weight="600">▦</text>
+  <text x="60"  y="690" fill="#7c6af7" font-size="10" text-anchor="middle">Agenda</text>
+
+  <!-- Week -->
+  <text x="160" y="676" fill="#bbb" font-size="10" text-anchor="middle">⬚</text>
+  <text x="160" y="690" fill="#bbb" font-size="10" text-anchor="middle">Week</text>
+
+  <!-- Month -->
+  <text x="260" y="676" fill="#bbb" font-size="10" text-anchor="middle">▦</text>
+  <text x="260" y="690" fill="#bbb" font-size="10" text-anchor="middle">Month</text>
+
+  <!-- Add -->
+  <circle cx="400" cy="670" r="22" fill="#7c6af7"/>
+  <text x="400" y="677" fill="white" font-size="22" text-anchor="middle" font-weight="300">+</text>
+
+  <!-- Undo snackbar -->
+  <rect x="16" y="608" width="280" height="28" rx="6" fill="#333"/>
+  <text x="28" y="626" fill="#ccc" font-size="11">↩  Undo: completed "Grammar drill"</text>
+
+</svg>

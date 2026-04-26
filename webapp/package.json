@@ -1,0 +1,33 @@
+{
+  "name": "testtask",
+  "description": "testtask",
+  "license": "MIT",
+  "repository": "",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/build.dev.mjs",
+    "build": "node scripts/build.prod.cjs",
+    "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "fmt": "oxfmt"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.20",
+    "nanoid": "^5.1.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router": "^5.3.4",
+    "react-router-dom": "^5.3.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.26.0",
+    "@testing-library/react": "^16.0.0",
+    "@types/node": "^22.19.17",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/react-router-dom": "^5.3.3",
+    "esbuild": "^0.28.0",
+    "oxfmt": "^0.46.0",
+    "typescript": "^6.0.3"
+  }
+}
