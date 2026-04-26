@@ -1,5 +1,5 @@
 import * as React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import "./style.css";
 import "./pico.css";
 import { routes } from "routes";
@@ -9,12 +9,14 @@ import { DataProvider } from "providers/data.provider";
 export const App = () => {
   return (
     <DataProvider>
-      <BrowserRouter>
+      <HashRouter>
         <NavBar />
-        {routes.map((r) => (
-          <Route {...r} key={r.id} />
-        ))}
-      </BrowserRouter>
+        <Switch>
+          {routes.map((r) => (
+            <Route {...r} key={r.id} />
+          ))}
+        </Switch>
+      </HashRouter>
     </DataProvider>
   );
 };

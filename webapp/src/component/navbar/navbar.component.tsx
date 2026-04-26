@@ -4,9 +4,16 @@ import { useLocation, useParams } from "react-router";
 import { ROUTES } from "../../routes";
 
 import "./navbar.styles";
+import dayjs from "dayjs";
+import { DATE_FORMAT } from "utils/utils";
 
 const getClassName = (isActive: boolean): string =>
   isActive ? "NavBar_button_active" : "NavBar_button_inactive";
+
+const today = dayjs();
+const todayString = today.format(DATE_FORMAT);
+const weekStart = today.startOf("week");
+const monthStart = today.startOf("month");
 
 export function NavBar() {
   const { pathname } = useLocation();
@@ -17,17 +24,17 @@ export function NavBar() {
       <h1>habitshit</h1>
       <ul className="NavBar_buttongroup">
         <li>
-          <NavLink exact to={ROUTES.AGENDA} className={getClassName}>
-            Agenda
+          <NavLink exact to={`/day/${todayString}`} className={getClassName}>
+            Today
           </NavLink>
         </li>
         <li>
-          <NavLink to={ROUTES.WEEKVIEW} className={getClassName}>
+          <NavLink to={`/week/${weekStart.format(DATE_FORMAT)}`} className={getClassName}>
             Week
           </NavLink>
         </li>
         <li>
-          <NavLink to={ROUTES.MONTHVIEW} className={getClassName}>
+          <NavLink to={`/month/${monthStart.format(DATE_FORMAT)}`} className={getClassName}>
             Month
           </NavLink>
         </li>

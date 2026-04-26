@@ -1,3 +1,5 @@
+import { Occurance } from "./series.types";
+
 export enum Stores {
   Series = "Series",
   Occurances = "Occurances",
@@ -124,6 +126,38 @@ export const getStoreData = <T>(storeName: Stores): Promise<T[]> => {
       res.onsuccess = () => {
         resolve(res.result);
       };
+    };
+  });
+};
+
+export const getOccuranceByDate = (targetDay: string): Promise<Occurance[]> => {
+  let request: IDBOpenDBRequest;
+  let db: IDBDatabase;
+
+  return new Promise((resolve) => {
+    request = indexedDB.open(DB_NAME);
+
+    request.onsuccess = () => {
+      console.log("request.onsuccess - getAllData");
+      db = request.result;
+      const tx = db.transaction(Stores.Occurances, "readonly");
+      const store = tx.objectStore(Stores.Occurances);
+      const cursorRequest = store.openCursor();
+
+      let foundObjects: Occurance[] = [];
+
+      cursorRequest.onsuccess = (e) => {
+        const cursor = e.target.result;
+
+        if (cursor) {
+          if (cursor.value.date === targetDay) {
+            foundObjects.push(cursor.value);
+          }
+          cursor.continue();
+        }
+      };
+
+      resolve(foundObjects);
     };
   });
 };

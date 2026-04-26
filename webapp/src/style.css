@@ -84,9 +84,13 @@ main {
   /*gap: 4px;*/
 }
 
-.today {
+.focusDay {
   background: var(--color-accent);
   color: var(--white);
+}
+
+.today {
+  border: 3px solid var(--color-accent);
 }
 
 .dot {
@@ -132,7 +136,7 @@ main {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  max-width: '100px';
+  max-width: "100px";
   /*width: ;*/
 }
 
@@ -170,4 +174,60 @@ button:after {
   width: 100%;
   max-width: calc(100wv - 20px);
   /*overflow: hidden;*/
+}
+
+.changeViewButton {
+  border: none;
+  align-self: flex-start;
+}
+
+/*calendar shit*/
+
+.calendar-grid {
+  display: grid;
+  /* Create 7 columns for the days of the week */
+  grid-template-columns: repeat(7, 1fr);
+  border: 1px solid #eee;
+  border-top: none;
+  gap: 0px;
+  margin: 15px 0;
+}
+
+.day-header {
+  /*border: 1px solid #eee;*/
+  border: none;
+  text-align: right;
+  padding: 10px 5px;
+  text-align: center;
+  font-weight: normal;
+  text-transform: uppercase;
+  background-color: #e0e0e0;
+}
+.calendar-cell {
+  border: 1px solid #eee;
+  padding: 10px 5px;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100px;
+  /*background-color: #f9f9f9;*/
+}
+
+/* Style for empty cells used for alignment */
+.empty-leading {
+  /*background-color: #f0f0f0;*/
+  border: 1px solid #eee;
+  color: "#ccc" !important;
+}
+
+/* Style for the actual day number */
+.calendar-cell:not(.empty-leading) {
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.monthDayTitle {
+  font-size: 10px;
+  align-self: flex-end;
 }

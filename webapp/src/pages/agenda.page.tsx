@@ -2,15 +2,11 @@ import React, { useMemo } from "react";
 import dayjs, { Dayjs } from "dayjs";
 import { useData } from "providers/data.provider";
 import { Occurance } from "utils/series.types";
-import {
-  DATE_FORMAT,
-  findNextOccurance,
-  formatDate,
-  stringToColour,
-} from "utils/utils";
+import { DATE_FORMAT, findNextOccurance, stringToColour } from "utils/utils";
+import { useHistory } from "react-router";
 
 const today = dayjs();
-const todayString = dayjs().format(DATE_FORMAT);
+// const todayString = dayjs().format(DATE_FORMAT);
 
 const buildOverviewDays = (day: Dayjs) => {
   const days = [];
@@ -21,22 +17,23 @@ const buildOverviewDays = (day: Dayjs) => {
   return days;
 };
 
-export function AgendaPage() {
+export function AgendaPage({ day }: { day: string }) {
+  console.log("AgendaPage", day);
   const { occuranceList, seriesMap, patchOccurance } = useData();
+  const history = useHistory();
 
   const overviewData = useMemo(
     () =>
-      buildOverviewDays(today).map((d) => ({
+      buildOverviewDays(dayjs(day)).map((d) => ({
         date: d,
         occurances: occuranceList.filter((o) => o.date === d),
       })),
-    [occuranceList],
+    [occuranceList, day],
   );
 
-  const dayData = useMemo(
-    () => occuranceList.filter((o) => o.date === todayString),
-    [occuranceList],
-  );
+  const dayData = useMemo(() => {
+    return occuranceList.filter((o) => o.date === day);
+  }, [occuranceList, day]);
 
   const handleMarkDone = (target: Occurance) => {
     const newOccurance = { ...target, status: "completed" };
@@ -45,15 +42,29 @@ export function AgendaPage() {
 
   return (
     <main>
-      <h4>Today: {formatDate(today)}</h4>
-      <section className="vflex" style={{ justifyContent: "center" }}>
-        <div className="overview" style={{ justifyContent: "center", maxWidth: '720px' }}>
+      {day === today.format(DATE_FORMAT) ? <h4>Today: {day}</h4> : <h4>Day: {day}</h4>}
+      <section className="hflex" style={{ justifyContent: "center" }}>
+        <button
+          className="changeViewButton outline"
+          data-tooltip="Previous day"
+          onClick={() => history.push(`/day/${dayjs(day).subtract(1, "day").format(DATE_FORMAT)}`)}
+        >
+          {"<"}
+        </button>
+        <div className="overview" style={{ justifyContent: "center", maxWidth: "720px" }}>
           {overviewData.map((d) => {
             return (
               <article
                 key={d.date}
-                style={{ margin: 0 }}
-                className={d.date === todayString ? "vflexCenter today" : "vflexCenter"}
+                style={{ margin: 0, cursor: "pointer" }}
+                onClick={() => history.push(`/day/${d.date}`)}
+                className={[
+                  "vflexCenter",
+                  d.date === today.format(DATE_FORMAT) && "today",
+                  d.date === day && "focusDay",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
               >
                 <span>{dayjs(d.date).format("ddd")}</span>
                 <span>{dayjs(d.date).format("DD")}</span>
@@ -81,6 +92,13 @@ export function AgendaPage() {
             );
           })}
         </div>
+        <button
+          className="changeViewButton outline"
+          data-tooltip="Next day"
+          onClick={() => history.push(`/day/${dayjs(day).add(1, "day").format(DATE_FORMAT)}`)}
+        >
+          {">"}
+        </button>
       </section>
 
       <section>
