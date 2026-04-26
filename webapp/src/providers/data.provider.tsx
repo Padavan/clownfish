@@ -63,8 +63,6 @@ const DataProvider = (props: PropsWithChildren) => {
     setOccuranceList(list);
   };
 
-  console.log("occuranceList", occuranceList);
-
   const doDb = async () => {
     if (!dbStatus) {
       // console.log("initdb");
@@ -82,7 +80,6 @@ const DataProvider = (props: PropsWithChildren) => {
   const updateOccurances = async () => {
     const occurances = Array.from(seriesMap.values()).flatMap((s) => generateEvents(s));
 
-    console.log("occurances", occurances);
     for await (const occ of occurances) {
       await addData(Stores.Occurances, occ);
     }

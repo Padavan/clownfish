@@ -93,8 +93,6 @@ export const stringToColour = (str: string) => {
     hash = char.charCodeAt(0) + ((hash << 5) - hash);
   });
 
-  console.log("MODULO", hash % pallette.length);
-
   return pallette[Math.abs(hash % pallette.length)];
 };
 
@@ -105,13 +103,11 @@ export const generateEvents = (series: Series): Occurance[] => {
   const endInterval = today.add(90, "day").format(DATE_FORMAT);
 
   if (series.strategy === Strategy.FIBONACCI) {
-    console.log("1");
     const range = getFibonacciInRange({
       startDate,
       startInterval,
       endInterval,
     });
-    console.log("range", range);
     return range.map((o) => ({
       id: `${series.id}-${o.occurance}`,
       date: o.date,
@@ -127,7 +123,6 @@ export const generateEvents = (series: Series): Occurance[] => {
       startInterval,
       endInterval,
     });
-    console.log("range", range);
     return range.map((o) => ({
       id: `${series.id}-${o.occurance}`,
       date: o.date,

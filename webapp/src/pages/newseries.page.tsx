@@ -41,7 +41,6 @@ export function NewSeriesPage() {
 
     if (name && startDate && strategy) {
       await createNewSeries(newSeries);
-      console.log("submitting series", newSeries);
       history.push(ROUTES.AGENDA);
     } else {
       setError("Not all requiered fields are filed");

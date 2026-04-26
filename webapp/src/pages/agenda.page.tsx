@@ -18,7 +18,6 @@ const buildOverviewDays = (day: Dayjs) => {
 };
 
 export function AgendaPage({ day }: { day: string }) {
-  console.log("AgendaPage", day);
   const { occuranceList, seriesMap, patchOccurance } = useData();
   const history = useHistory();
 
@@ -42,7 +41,9 @@ export function AgendaPage({ day }: { day: string }) {
 
   return (
     <main>
-      {day === today.format(DATE_FORMAT) ? <h4>Today: {day}</h4> : <h4>Day: {day}</h4>}
+      <h4>
+        {dayjs(day).format("MMMM DD, YYYY")} {day === today.format(DATE_FORMAT) && "(Today)"}
+      </h4>
       <section className="hflex" style={{ justifyContent: "center" }}>
         <button
           className="changeViewButton outline"
@@ -73,12 +74,13 @@ export function AgendaPage({ day }: { day: string }) {
           })}
           {overviewData.map((d) => {
             return (
-              <div>
+              <div key={`${d.date}-containers`}>
                 <span style={{ display: "flex", flexDirection: "column", gap: "1px" }}>
                   {d.occurances.map((item) => {
                     const color = stringToColour(item.seriesId) ?? "#000";
                     return (
                       <span
+                        key={item.id}
                         title={seriesMap.get(item.seriesId)?.name}
                         className="line"
                         style={{
@@ -109,10 +111,9 @@ export function AgendaPage({ day }: { day: string }) {
             const nextOccDate = findNextOccurance(occuranceList, occurance);
             const nextDate = nextOccDate ? dayjs(nextOccDate) : undefined;
 
-            console.log("===status", occurance.status);
-
             return (
               <article
+                key={occurance.id}
                 style={{
                   borderLeftColor: stringToColour(occurance.seriesId ?? "nocolor"),
                   borderLeftStyle: "solid",

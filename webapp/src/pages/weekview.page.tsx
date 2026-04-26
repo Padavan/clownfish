@@ -1,11 +1,9 @@
 import React, { useMemo } from "react";
 import dayjs, { Dayjs } from "dayjs";
 import { useData } from "providers/data.provider";
-import { Occurance } from "utils/series.types";
-import { DATE_FORMAT, findNextOccurance, formatDate, stringToColour } from "utils/utils";
+import { DATE_FORMAT, stringToColour } from "utils/utils";
 import { useHistory } from "react-router";
 
-const today = dayjs();
 const todayString = dayjs().format(DATE_FORMAT);
 
 const buildOverviewDays = (day: Dayjs) => {
@@ -35,12 +33,8 @@ export function WeekViewPage({ day }: { day: string }) {
 
   return (
     <main>
-      {/*  {day === today.format(DATE_FORMAT)
-        ? <h4>Today: {day}</h4>
-        : <h4>Day: {day}</h4>
-      }*/}
       <h4>
-        Week: {dayjs(overviewData[0]?.date).format("MMM DD")} ---{" "}
+        {dayjs(overviewData[0]?.date).format("MMM DD")} ---{" "}
         {dayjs(overviewData[6]?.date).format("MMM DD")} {isCurrentWeek && "(Current week)"}
       </h4>
       <section className="hflex" style={{ justifyContent: "center" }}>
@@ -70,6 +64,7 @@ export function WeekViewPage({ day }: { day: string }) {
           {overviewData.map((d) => {
             return (
               <span
+                key={d.date}
                 style={{ display: "flex", flexDirection: "column", gap: "4px", overflow: "hidden" }}
               >
                 {d.occurances.map((item) => {
@@ -78,6 +73,7 @@ export function WeekViewPage({ day }: { day: string }) {
 
                   return (
                     <div
+                      key={item.id}
                       title={seriesMap.get(item.seriesId)?.name}
                       className="weekLine"
                       style={{

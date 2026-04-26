@@ -41,10 +41,7 @@ export const routes: Array<RouteProps & { id: string }> = [
     id: ROUTES.DAYVIEW,
     path: ROUTES.DAYVIEW,
     exact: true,
-    children: ({ match }) => {
-      console.log("match", match);
-      return <AgendaPage day={match?.params["day"] ?? today} />;
-    },
+    children: ({ match }) => <AgendaPage day={match?.params["day"] ?? today} />,
   },
   // { id: ROUTES.CAMPAIGNS, path: ROUTES.CAMPAIGNS, children: <CampaignsPage />, },
   // { id: ROUTES.NEW_CAMPAIGN, path: ROUTES.NEW_CAMPAIGN, children: <NewCampaignPage /> },

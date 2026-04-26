@@ -19,12 +19,10 @@ export function MonthViewPage({ day }: { day: string }) {
   const [occuranceMap, setOccuranceMap] = useState(new Map<string, Occurance[]>());
 
   const fillOccuranceMap = async () => {
-    console.log("===fillOccuranceMap");
     const map = new Map<string, Occurance[]>();
 
     const daysArr = [];
     for (let i = 0; i < currentDate.daysInMonth(); i++) {
-      console.log("day:", currentDate.add(i, "day").format(DATE_FORMAT));
       daysArr.push(currentDate.add(i, "day").format(DATE_FORMAT));
     }
 
@@ -100,7 +98,7 @@ export function MonthViewPage({ day }: { day: string }) {
           {"<"}
         </button>
         <h4>
-          Month: {currentMonth} {} {currentMonth === todayMonth && "(Current month)"}
+          {currentMonth} {currentMonth === todayMonth && "(Current month)"}
         </h4>
         <button
           className="changeViewButton outline"
@@ -139,6 +137,7 @@ export function MonthViewPage({ day }: { day: string }) {
 
                 return (
                   <span
+                    key={item.id}
                     title={seriesMap.get(item.seriesId)?.name}
                     className="line"
                     style={{
